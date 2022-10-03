@@ -24,7 +24,6 @@
 </head>
 
 <body>
-
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
   <header id="header" class="d-flex flex-column justify-content-center">
 
@@ -35,6 +34,8 @@
         <li><a href="#facts" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Facts</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         <li><a onclick="darkmode()" class="nav-link darkmode"><i class="bx bx-moon"></i> <span>DarkMode</span></a></li>
+        <li><a onclick="musictoggle()" class="nav-link darkmode"><i class="bx bx-music"></i> <span>Music</span></a></li>
+        <li><audio id="myAudio" autoplay="autoplay" src="https://christmasfm.cdnstream1.com/2550_128.mp3?listenerId=esAdblock0960421&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1664809851&aw_0_req.gdpr=true"></li>
       </ul>
     </nav>
 
@@ -234,8 +235,29 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <script defer>
+    var x = document.getElementById("myAudio");
+    x.volume = 0.2;
     var element = document.body;
     element.classList.toggle("dark-mode");
+    
+  </script>
+  <script>
+    var myAudio = document.getElementById("myAudio");
+    var isPlaying = false;
+
+    function musictoggle() {
+      if (isPlaying) {
+        myAudio.pause()
+      } else {
+        myAudio.play();
+      }
+    };
+    myAudio.onplaying = function() {
+      isPlaying = true;
+    };
+    myAudio.onpause = function() {
+      isPlaying = false;
+    };    
   </script>
   
   <script>
@@ -253,6 +275,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
 
   <script src="assets/js/main.js"></script>
 
