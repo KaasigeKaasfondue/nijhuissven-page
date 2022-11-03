@@ -20,7 +20,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style-HALLOWEEN.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,8 +34,9 @@
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#facts" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Facts</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a onclick="darkmode()" class="nav-link darkmode"><i class="bx bx-moon"></i> <span>DarkMode</span></a></li>
         <li><a onclick="musictoggle()" class="nav-link darkmode"><i class="bx bx-music"></i> <span>Music</span></a></li>
-        <li><audio id="myAudio" autoplay="autoplay" src="https://christmasfm.cdnstream1.com/2550_128.mp3"></li>
+        <li><audio id="myAudio" autoplay="autoplay" src="https://christmasfm.cdnstream1.com/2550_128.mp3?listenerId=esAdblock0960421&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1664809851&aw_0_req.gdpr=true"></li>
       </ul>
     </nav>
 
@@ -43,8 +44,8 @@
 
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1><a class="button" onclick="darkmode()" style="font-family: MerryChristmasFONT2;" >Sven</a></h1>
-      <p>I'm a <span class="typed" data-typed-items="Developer, Designer"></span></p>
+      <h1><a class="button" onclick="darkmode()">SVEN</a></h1>
+      <p>I'm a <span class="typed" data-typed-items="DEVELOPER, DESIGNER"></span></p>
       <div class="social-links">
         <a href="https://twitter.com/volgendeweekk" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="https://github.com/VolgendeWeek" class="github"><i class="bx bxl-github"></i></a>
@@ -58,7 +59,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 style="font-family: MerryChristmasFONT;">About</h2>
+          <h2 style="font-family: HalloWeenFONT;">ABOUT</h2>
           <p>Hello! I'm Sven. I code i think. </p>
         </div>
 
@@ -92,7 +93,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 style="font-family: MerryChristmasFONT;">Facts</h2>
+          <h2 style="font-family: HalloWeenFONT;">FACTS</h2>
           <p>In all of my time of coding i have made much stuff. Here below you see more stats</p>
         </div>
 
@@ -139,7 +140,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 style="font-family: MerryChristmasFONT;">SKILLS</h2>
+          <h2 style="font-family: HalloWeenFONT;">SKILLS</h2>
         </div>
 
         <div class="row skills-content">
@@ -181,7 +182,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 style="font-family: MerryChristmasFONT;">CONTACT</h2>
+          <h2 style="font-family: HalloWeenFONT;">CONTACT</h2>
         </div>
 
         <div class="row mt-1">
@@ -218,16 +219,16 @@
 
   <footer id="footer">
     <div class="container">
-      <h3 style="font-family: MerryChristmasFONT;">SVEN</h3>
+      <h3 style="font-family: HalloWeenFONT;">SVEN</h3>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="https://github.com/VolgendeWeek" class="github"><i class="bx bxl-github"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span style="font-family: MerryChristmasFONT;">VOLGENDEWEEK</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span style="font-family: HalloWeenFONT;">VOLGENDEWEEK</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="https://github.com/VolgendeWeek" style="font-family: MerryChristmasFONT;">VOLGENDEWEEK</a>
+        Designed by <a href="https://github.com/VolgendeWeek" style="font-family: HalloWeenFONT;">VOLGENDEWEEK</a>
       </div>
     </div>
   </footer>
@@ -259,7 +260,13 @@
       isPlaying = false;
     };    
   </script>
-
+  
+  <script>
+    function darkmode() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>  
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -311,7 +318,7 @@
                       },
                       "move": {
                           "enable": true,
-                          "speed": 1,
+                          "speed": 1.0,
                           "direction": "bottom",
                           "random": true,
                           "straight": false,
